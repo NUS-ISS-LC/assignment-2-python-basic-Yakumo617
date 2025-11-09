@@ -7,7 +7,11 @@ def find(s, n):
 
 
 print("Enter the array:")
-nums = list(map(int, input().split()))
+input_string = input()
+nums_str = input_string.split()
+nums = []
+for x in nums_str:
+    nums.append(int(x))
 
 print("Enter the target value:")
 target = int(input())
@@ -15,6 +19,6 @@ target = int(input())
 result = find(nums, target)
 
 if result:
-    print(f"Output: {result}")
+    print("Output: " , result)
 else:
     print("No two numbers found that add up to the target")
